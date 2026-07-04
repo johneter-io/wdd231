@@ -4,12 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231</title>
+    <title>WDD231 - Course Home Page</title>
+    <meta name="description" content="Course Home Page">
+    <meta name="author" content="John Peter Joseph">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
 
 <body>
-    <h1>WDD231 - John Peter Joseph</h1>
 
+    <header>
+        <div class="">
+            <img src="" alt="Website logo">
+            <span class="name">John Peter Joseph</span>
+        </div>
+
+        <button id="menu" aria-label="Open navigation menu"></button>
+
+        <nav id="navigation">
+            <ul>
+                <li>
+                    <a class="active" href="index.html"> Home</a>
+                </li>
+                <li>
+                    <a href="chamber/index.html">Chamber</a>
+                </li>
+                <li>
+                    <a href="final/index.html">Final</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <div class="home-grid">
+            <section class="card">
+                <h2>About Me</h2>
+                <p>
+                    Hello, my name is John Peter Joseph. I'm from Haiti. I'm 36 years old. I'm currently a software
+                    development student at
+                    BYU-Idaho. I want to become a software engineer and work on an ecosystem designed to help people who
+                    are trying to find
+                    their place in the world of tomorrow, where most tasks will be automated.
+                </p>
+
+            </section>
+            <section class="card">
+                <h2>Here I am</h2>
+
+                <img src="" alt="">
+            </section>
+
+            <section class="card certificate">
+
+                <h2>Web & Computer Programming Certificate</h2>
+
+                <div class="filter-buttons">
+                    <button id="allCourses">All Courses</button>
+                    <button id="wddCourses">WDD Courses</button>
+                    <button id="cse-Courses">CSE Courses</button>
+                </div>
+
+                <div id="courseContainer">
+                </div>
+
+                <p id="creditTotal"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="" target="_blank" rel="noopener"><img src="" alt="GitHub"></a>
+            <a href="" target="_blank" rel="noopener"><img src="" alt="LinkedIn"></a>
+            <a href="" target="_blank" rel="noopener"><img src="" alt="Facebook"></a>
+        </div>
+
+        <p>&#169; <span id="currentyear"></span> &bull; John Peter Joseph &bull; Haïti</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
