@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD231 - Course Home Page</title>
-    <meta name="description" content="Course Home Page">
+    <meta name="description"
+        content="Course Home Page - an assignment based on the concepts covered in previous courses on Web Development.">
     <meta name="author" content="John Peter Joseph">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="favicon.ico">
 
-    <script src="scripts/course.js" defer></script>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/courses.js" defer></script>
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
 </head>
@@ -25,74 +27,67 @@
 <body>
 
     <header>
-        <div class="">
-            <img src="" alt="Website logo">
+        <div class="my-logo">
+            <img src="images/john-logo.svg" alt="Website logo">
             <span class="name">John Peter Joseph</span>
         </div>
 
-        <button id="menu" aria-label="Open navigation menu"></button>
+        <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
 
-        <nav id="navigation">
+        <nav id="nav-bar" class="nav-bar">
             <ul>
-                <li>
-                    <a class="active" href="index.html"> Home</a>
-                </li>
-                <li>
-                    <a href="chamber/index.html">Chamber</a>
-                </li>
-                <li>
-                    <a href="final/index.html">Final</a>
-                </li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h1>Home</h1>
-        <div class="home-grid">
+        <div class="hero">
             <section class="card">
                 <h2>About Me</h2>
                 <p>
-                    Hello, my name is John Peter Joseph. I'm from Haiti. I'm 36 years old. I'm currently a software
+                    Hello, my name is <strong>John Peter Joseph.</strong> I'm from Haiti. I'm 36 years old. I'm
+                    currently a software
                     development student at
-                    BYU-Idaho. I want to become a software engineer and work on an ecosystem designed to help people who
+                    BYU-Idaho. I want to become a Software Engineer and work on an ecosystem designed to help people who
                     are trying to find
                     their place in the world of tomorrow, where most tasks will be automated.
                 </p>
 
             </section>
             <section class="card">
-                <h2>Here I am</h2>
-
-                <img src="" alt="">
+                <h2>My Photo</h2>
+                <img src="images/john-profile.jpg" width="200" height="200" alt="John Peter Joseph profile">
             </section>
 
             <section class="card certificate">
-
                 <h2>Web & Computer Programming Certificate</h2>
 
                 <div class="filter-buttons">
-                    <button id="allCourses">All Courses</button>
-                    <button id="wddCourses">WDD Courses</button>
-                    <button id="cse-Courses">CSE Courses</button>
+                    <button id="all">All Courses</button>
+                    <button id="wdd">WDD Courses</button>
+                    <button id="cse">CSE Courses</button>
                 </div>
-
-                <div id="courseContainer">
-                </div>
-
-                <p id="creditTotal"></p>
+                <div id="card-container"></div>
+                <p>The total number of credits listed is<span id="creditTotal"></span></p>
             </section>
         </div>
     </main>
 
     <footer>
         <div class="social">
-            <a href="" target="_blank" rel="noopener"><img src="" alt="GitHub"></a>
-            <a href="" target="_blank" rel="noopener"><img src="" alt="LinkedIn"></a>
-            <a href="" target="_blank" rel="noopener"><img src="" alt="Facebook"></a>
+            <a href="https://github.com/johneter-io" target="_blank"><img src="images/icons/github.png"
+                    alt="GitHub Icon"></a>
+            <a href="https://www.linkedin.com/in/johnpeterjoseph/?locale=en-US" target="_blank"><img
+                    src="images/icons/linkedin.png" alt="LinkedIn Icon"></a>
+            <a href="https://x.com/thejohneter" target="_blank"><img src="images/icons/twitter.png"
+                    alt="Twitter Icon"></a>
         </div>
 
-        <p>&#169; <span id="currentyear"></span> &bull; John Peter Joseph &bull; Haïti</p>
+        <p>&#169; <span id="currentyear"></span> &bull; John Peter Joseph &bull; Haiti</p>
         <p id="lastModified"></p>
     </footer>
 </body>

@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black-raisin: rgb(36, 33, 45);
+    --silver: rgb(247, 247, 247);
+    --caribbean-blue: rgb(0, 166, 195);
+    --charcoal: rgb(47, 44, 55);
+    --slategray: rgb(153, 153, 153);
+    --font-main: "Montserrat", sans-serif;
+    --max-width: 1200px;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--silver);
+    background-color: var(--black-raisin);
+    height: auto;
+    text-align: justify;
+    margin: 1rem;
+}
+
+html {
+    font-size: 16px;
+    min-height: 40vh;
+    scroll-behavior: smooth;
+}
+
+/* ======================================================= HEADER =======================================================  */
+header {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ======================================================= MAIN =======================================================  */
+main {
+    max-width: 100%;
+    padding: 1rem 0;
+}
+
+.my-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--caribbean-blue);
+    font-weight: 700;
+}
+
+.my-logo img {
+    height: 60px;
+}
+
+@media (min-width: 700px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+h1 {
+    padding: 1rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 0.1rem;
+    background-color: var(--caribbean-blue);
+    padding: 0.9rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--black-raisin);
+    font-weight: 700;
+    padding: 0.25rem;
+}
+
+ul li a:hover {
+    color: var(--silver);
+    background-color: var(--black-raisin);
+    border-radius: 8px;
+}
+
+ul li a.active {
+    background-color: var(--black-raisin);
+    color: var(--caribbean-blue);
+}
+
+ul li a.active:hover {
+    background-color: var(--black-raisin);
+    color: var(--caribbean-blue);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* --- CARDS (About Me / Photo) --- */
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--charcoal);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: var(--caribbean-blue);
+    color: var(--black-raisin);
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 1rem;
+}
+
+.card p {
+    padding: 1rem;
+    text-align: left;
+    color: var(--caribbean-blue);
+}
+
+.card img {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* --- CERTIFICATE SECTION (spans both columns) --- */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#card-container figure {
+    background-color: var(--black-raisin);
+    border: 1px solid var(--caribbean-blue);
+    border-radius: 3px;
+    margin: 0;
+    color: var(--silver);
+    line-height: 1.3;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#card-container figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px var(--slategray);
+}
+
+#card-container figure p {
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+}
+
+#card-container figure h2 {
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+}
+
+#card-container figure .status {
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+#card-container figure.completed-course {
+    border-color: var(--caribbean-blue);
+    opacity: 0.7;
+}
+
+.certificate {
+    grid-column: 1 / -1;
+}
+
+.certificate p {
+    text-align: center;
+    color: var(--silver);
+    font-weight: 400;
+}
+
+.filter-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.filter-buttons button {
+    flex: 1;
+    background-color: var(--black-raisin);
+    color: var(--silver);
+    border: 1px solid var(--caribbean-blue);
+    border-radius: 6px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: var(--font-main);
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+    background-color: var(--caribbean-blue);
+    color: var(--black-raisin);
+}
+
+#creditTotal {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ======================================================= FOOTER ======================================================= */
+footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.social img {
+    height: 60px;
+    filter: invert(1);
+}
+
+footer p {
+    font-size: 1rem;
+    color: var(--caribbean-blue);
+}
