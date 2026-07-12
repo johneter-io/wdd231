@@ -1,6 +1,6 @@
 function handleHamburger() {
-    const hamburger = document.getElementById(`hamburger`);
     const navBar = document.getElementById(`nav-bar`);
+    const hamburger = document.getElementById(`hamburger`);
 
     if (!hamburger) return;
 
