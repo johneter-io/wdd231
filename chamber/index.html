@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | Pétion-Ville Chamber of Commerce</title>
-    <meta name="description"
-        content="In this Chamber of Commerce directory, you will find the complete contact information for a selection of technology companies based in Pétion-Ville.">
+    <title>Home | Pétion-Ville Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Chamber of Commerce's website, which features a selection of
+        technology companies based in Pétion-Ville.">
     <meta name="author" content="John Peter Joseph">
 
     <!--Meta Graph (open graph)-->
     <meta property="og:title" content="The Pétion-Ville Chamber of Commerce">
-    <meta property="og:description" content="Explore the Pétion-Ville Chamber of Commerce's business directory">
-    <meta property="og:image" content="">
+    <meta property="og:description" content="Home Page of the Pétion-Ville Chamber of Commerce Business Directory">
+    <meta property="og:image" content="https://johneter-io.github.io/wdd231/chamber/images/hero-large.webp">
     <meta property="og:url" content="https://johneter-io.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
@@ -29,12 +29,11 @@
     <link rel="stylesheet" href="styles/large.css">
 
     <!-- Scripts -->
-    <script src="scripts/directory.js" defer></script>
     <script src="scripts/dates.js" defer></script>
+    <script src="scripts/index.js" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
-
 </head>
 
 <body>
@@ -50,25 +49,66 @@
         <!-- Main navigation menu for the site -->
         <nav id="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main content of the Directory page -->
+    <!-- Main content of the Home page -->
     <main>
-        <h1 class="header-main">Business Directory</h1>
-        <!-- Display control buttons area -->
-        <section class="directory-btn toggle-buttons">
-            <!-- JavaScript-controlled buttons to switch the directory view (Grid vs. List) -->
-            <button type="button" id="grid-btn" class="active" aria-label="Grid View">&#8862; | Grid View</button>
-            <button type="button" id="list-btn" aria-label="List View">&#8863; | List View </button>
+        <div class="hero-container">
+            <picture>
+                <source media="(min-width: 960px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 600px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.jpg" alt="A person who observes the postponement of a business activity"
+                    class="hero-image" loading="eager">
+            </picture>
+            <div class="cta">
+                <a href="join.html" class="cta-btn">Join the Chamber</a>
+            </div>
+        </div>
+
+        <div class="info-grid">
+            <section class="card events-card">
+                <h1>UPCOMING EVENTS</h1>
+                <div class="event-item">
+                    <h2>Pétion-Ville Fair 2026</h2>
+                    <p>Would you like to learn about local innovations? Join us on August 8, 2026, at the annual
+                        technology and trade fair.</p>
+                </div>
+            </section>
+
+            <section class="card weather-card">
+                <h2>CURRENT WEATHER</h2>
+                <div id="current-weather-content">
+                    <div class="weather-main">
+                        <img id="weather-icon" src="images/partly-cloudy.png" alt="Images of the weather conditions"
+                            class="weather-icon">
+                        <span id="current-temp">--°C</span>
+                    </div>
+                    <p id="weather-desc">Loading weather...</p>
+                    <div class="weather-details">
+                        <p>Humidity: <span id="humidity">--</span>%</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card forecast-card">
+                <h2>WEATHER FORECAST</h2>
+                <ul id="forecast-list">
+                    <li>Loading 3-day forecast...</li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="spotlight-section">
+            <h2>BUSINESS SPOTLIGHT</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+            </div>
         </section>
-        <!-- Empty container: will be dynamically populated by JavaScript with company data -->
-        <article id="directory-container" class="grid-view"></article>
     </main>
 
     <!-- Footer: Contacts, Social Media, and Development Information -->

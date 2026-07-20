@@ -1,0 +1,528 @@
+/* ==========================================================================
+GLOBAL RESET - Reset margins and sizing calculations
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   GLOBAL VARIABLES - Graphic Guidelines and Site Structure
+   ========================================================================== */
+:root {
+    --cobalt-blue: rgb(0, 71, 171);
+    --vibrant-orange: rgb(255, 153, 0);
+    --charcoal: rgb(33, 37, 41);
+    --off-white: rgb(248, 249, 250);
+    --off-gray: rgba(233, 239, 242, 0.824);
+    --gold: rgb(133, 100, 4);
+    --bg-gold: rgb(255, 243, 205);
+    --silver: rgb(56, 61, 65);
+    --black-shadow: rgb(128, 128, 128);
+    --max-width: 1200px;
+    --font-main: "inter", sans-serif;
+}
+
+html {
+    font-size: 16px;
+    font-family: var(--font-main);
+    background-color: var(--off-white);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header & Navigation Area */
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: var(--off-gray);
+    border-bottom: 1px solid var(--cobalt-blue);
+    color: var(--cobalt-blue);
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.logo p {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+#menu {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: var(--cobalt-blue);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#navbar {
+    width: 100%;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+}
+
+#navbar.open ul {
+    display: flex;
+}
+
+#navbar a {
+    color: var(--cobalt-blue);
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    font-weight: 700;
+    border: 1px solid transparent;
+}
+
+#navbar a.active,
+#navbar a:hover {
+    color: var(--charcoal);
+    background-color: var(--vibrant-orange);
+    border: 1px solid var(--charcoal);
+    border-radius: 8px;
+}
+
+.header-main {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: var(--cobalt-blue);
+}
+
+/* Directory Layout Headings & Controls */
+.directory-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.toggle-buttons button {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--charcoal);
+    background-color: var(--off-gray);
+    color: var(--vibrant-orange);
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.toggle-buttons button.active {
+    background-color: var(--vibrant-orange);
+    color: var(--charcoal);
+}
+
+/* --- GRID VIEW --- */
+.grid-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.grid-view section {
+    background: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    border-top: 5px solid var(--vibrant-orange);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-view section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px var(--charcoal);
+}
+
+.grid-view section.level-2 {
+    border-top-color: var(--silver);
+}
+
+.grid-view section.level-3 {
+    border-top-color: var(--gold);
+}
+
+.grid-view section img {
+    max-width: 200px;
+    margin-bottom: 1rem;
+    height: 90px;
+    object-fit: contain;
+    align-self: center;
+}
+
+.grid-view section p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* --- LIST VIEW --- */
+.list-view {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.list-view section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--off-white);
+    border-bottom: 1px solid var(--vibrant-orange);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.list-view section img {
+    display: none;
+}
+
+.list-view section h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.list-view section p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+/* Membership Level Badges */
+.membership-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-lvl-1 {
+    background-color: var(--gold);
+    color: var(--charcoal);
+    border: 1px solid var(--vibrant-orange);
+}
+
+.badge-lvl-2 {
+    background-color: var(--off-gray);
+    color: var(--charcoal);
+    border: 1px solid var(--silver);
+}
+
+.badge-lvl-3 {
+    background-color: var(--bg-gold);
+    color: var(--gold);
+    border: 1px solid var(--vibrant-orange);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--off-gray);
+    color: var(--charcoal);
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--cobalt-blue);
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+.socials-btn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.socials-btn img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.socials-btn img:hover {
+    opacity: 1;
+}
+
+.card,
+.spotlight-section,
+.hero-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Hero Elements */
+.hero-container {
+    position: relative;
+    display: block;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 3;
+    object-fit: cover;
+}
+
+.cta a {
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--vibrant-orange);
+    color: var(--charcoal);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--charcoal);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--charcoal);
+    color: var(--vibrant-orange);
+    border: 1px solid var(--vibrant-orange);
+}
+
+/* Card Foundations */
+.card {
+    background: var(--off-gray);
+    border: 1px solid var(--vibrant-orange);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: var(--black-shadow) 0px 3px 8px;
+}
+
+.card h1,
+.weather-card h2,
+.forecast-card h2,
+.spotlight-section h2,
+main h2 {
+    background-color: var(--cobalt-blue);
+    color: var(--off-white);
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.15rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.card p,
+.card div,
+.card ul {
+    padding: 1rem;
+}
+
+/* Info Layouts */
+.event-item h2 {
+    color: var(--charcoal);
+    background: transparent;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+}
+
+.event-item p {
+    color: var(--charcoal);
+}
+
+#forecast-list {
+    list-style: none;
+}
+
+#forecast-list li {
+    color: var(--charcoal);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--vibrant-orange);
+}
+
+#forecast-list li strong {
+    color: var(--cobalt-blue);
+}
+
+#forecast-list li:last-child {
+    border-bottom: none;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+#current-weather-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+#current-weather-content div,
+#current-weather-content p {
+    padding: 0;
+    margin: 0;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--charcoal);
+}
+
+.weather-main img {
+    width: 50px;
+    height: 50px;
+}
+
+#weather-desc,
+.weather-details {
+    font-size: 1rem;
+    color: var(--charcoal);
+}
+
+/* ==========================================================================
+   UNIFORM STYLE FOR SPOTLIGHT CARDS
+   ========================================================================== */
+#spotlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.spotlight-card {
+    background-color: var(--off-white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--black-shadow);
+    border: 1px solid var(--off-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
+.spotlight-card h3 {
+    color: var(--charcoal);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.spotlight-card p {
+    color: var(--charcoal);
+    font-size: 0.95rem;
+}
+
+.spotlight-card a {
+    color: var(--cobalt-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+.spotlight-card img {
+    max-width: 140px;
+    height: 90px;
+    object-fit: contain;
+    align-self: center;
+}
+
+/* Global badge style */
+.spotlight-card .badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-left: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spotlight-card .badge.gold {
+    background-color: var(--bg-gold);
+    color: var(--gold);
+    border: 1px solid var(--vibrant-orange);
+}
+
+.spotlight-card .badge.silver {
+    background-color: var(--off-white);
+    color: var(--silver);
+    border: 1px solid var(--charcoal);
+}

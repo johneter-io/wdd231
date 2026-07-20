@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Pétion-Ville Tech Nest",
+    "address": "Angle Rue Jean-Jacques Louverture et Rue Faubert",
+    "phone": "+509 0123 0022",
+    "website": "https://www.pvtechnest.ht",
+    "image": "images/technest.webp",
+    "membershipLevel": 2,
+    "tagline": "The driving force behind the startup and web ecosystem in the heart of Pétion-Ville."
+  },
+  {
+    "name": "AgroTech Lab",
+    "address": "12, Route de Molader",
+    "phone": "+509 0782 4455",
+    "website": "https://www.agrotechlab.com",
+    "image": "images/agrotech.webp",
+    "membershipLevel": 3,
+    "tagline": "Innovating for Modern and Sustainable High-Altitude Agriculture."
+  },
+  {
+    "name": "Code Foundry",
+    "address": "Autoroute de Daert, Entre Daert 60 et 62 ",
+    "phone": "+509 0534 6677",
+    "website": "https://www.daertcode.io",
+    "image": "images/elevencode.webp",
+    "membershipLevel": 3,
+    "tagline": "Shaping Haiti's Full-Stack Developers of Tomorrow."
+  },
+  {
+    "name": "Gold Creative Studio",
+    "address": "Rue 24, Boulevard du Carenage",
+    "phone": "+509 0909 8899",
+    "website": "https://www.goldcreative.ht",
+    "image": "images/creativestudio.webp",
+    "membershipLevel": 3,
+    "tagline": "Combining narrative technology, visual art, and historical heritage."
+  },
+  {
+    "name": "Digital Arts & Design Hub",
+    "address": "45, Rue du Commerce, Près de l'Hôtel de Ville",
+    "phone": "+509 0135 1122",
+    "website": "https://www.hubarts.org",
+    "image": "images/digitalart.webp",
+    "membershipLevel": 2,
+    "tagline": "Where artisanal creativity meets digital design."
+  },
+  {
+    "name": "FinTech Accelerator",
+    "address": "19, Avenue Cartagena",
+    "phone": "+509 0880 3344",
+    "website": "https://www.accfintech.net",
+    "image": "images/digitaltransformation.webp",
+    "membershipLevel": 3,
+    "tagline": "Driving Financial Inclusion Through Local Mobile Solutions."
+  },
+  {
+    "name": "GreenEnergy Hub",
+    "address": "14, Route de Daert, Carrefour Joffre",
+    "phone": "+509 0802 5566",
+    "website": "https://www.greenenergy.org",
+    "image": "images/greenenergy.webp",
+    "membershipLevel": 3,
+    "tagline": "Developing clean technologies and solar microgrids."
+  },
+  {
+    "name": "Smart Data Intelligence",
+    "address": "31, Rue Charles Sumner",
+    "phone": "+509 0021 7788",
+    "website": "https://www.stmartdata.com",
+    "image": "images/dataintelligence.webp",
+    "tagline": "Make better decisions with Smart Data Intelligence."
+  },
+  {
+    "name": "EduTech Nexus",
+    "address": "35, Rue Merisier, Près de la Place d'Armes",
+    "phone": "+509 0129 9900",
+    "website": "https://www.edutechhaiti.ht",
+    "image": "images/edutech.webp",
+    "membershipLevel": 2,
+    "tagline": "Making digital learning accessible to everyone in Pétion-Ville."
+  }
+]
