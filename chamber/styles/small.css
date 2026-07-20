@@ -1,6 +1,3 @@
-/* ==========================================================================
-GLOBAL RESET - Reset margins and sizing calculations
-   ========================================================================== */
 *,
 *::before,
 *::after {
@@ -9,15 +6,51 @@ GLOBAL RESET - Reset margins and sizing calculations
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: var(--font-main);
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+img {
+    border-style: none;
+}
+
+button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
 /* ==========================================================================
-   GLOBAL VARIABLES - Graphic Guidelines and Site Structure
+   GLOBAL VARIABLES
    ========================================================================== */
 :root {
     --cobalt-blue: rgb(0, 71, 171);
     --vibrant-orange: rgb(255, 153, 0);
     --charcoal: rgb(33, 37, 41);
     --off-white: rgb(248, 249, 250);
-    --off-gray: rgba(233, 239, 242, 0.824);
     --gold: rgb(133, 100, 4);
     --bg-gold: rgb(255, 243, 205);
     --silver: rgb(56, 61, 65);
@@ -26,39 +59,200 @@ GLOBAL RESET - Reset margins and sizing calculations
     --font-main: "inter", sans-serif;
 }
 
-html {
-    font-size: 16px;
-    font-family: var(--font-main);
-    background-color: var(--off-white);
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+/* ==========================================================================
+   SHARED DECLARATIONS (consolidated to reduce repeated declarations)
+   ========================================================================== */
+
+.toggle-buttons button,
+.grid-view section,
+.list-view section,
+.membership-badge,
+.hero-container,
+.cta a,
+.card,
+.spotlight-section h2,
+.spotlight-card {
+    border-radius: 8px;
 }
 
-main {
-    width: 100%;
-    max-width: var(--max-width);
+.grid-view section,
+.list-view section,
+.card {
+    box-shadow: var(--black-shadow) 0px 3px 8px;
+}
+
+.grid-view,
+.list-view {
+    padding: 1.5rem;
     margin: 0 auto;
+}
+
+.grid-view section p,
+.list-view section p {
+    font-size: 0.9rem;
+}
+
+.event-item h2,
+.event-item p,
+#forecast-list li,
+.weather-main,
+#weather-desc,
+.weather-details,
+.spotlight-card h3,
+.spotlight-card p,
+#navbar a.active,
+#navbar a:hover,
+.toggle-buttons button.active,
+.badge-lvl-1,
+.badge-lvl-2,
+.cta a,
+footer {
+    color: var(--charcoal);
+}
+
+header,
+.logo,
+#navbar.open ul,
+.directory-btn,
+.list-view,
+.list-view section,
+footer,
+.socials-btn,
+#current-weather-content,
+.weather-main,
+#spotlight-container,
+.spotlight-card {
+    display: flex;
+}
+
+#navbar ul,
+.directory-btn,
+.list-view,
+.list-view section,
+footer,
+#current-weather-content,
+#spotlight-container,
+.spotlight-card {
+    flex-direction: column;
+}
+
+html,
+main,
+#navbar,
+#navbar ul,
+.directory-btn,
+.card,
+.spotlight-section,
+.hero-container,
+.hero-image {
+    width: 100%;
+}
+
+.directory-btn,
+.socials-btn,
+.weather-main {
+    justify-content: center;
+}
+
+header,
+.logo,
+.directory-btn,
+.socials-btn,
+#current-weather-content,
+.weather-main {
+    align-items: center;
+}
+
+header,
+#menu,
+#navbar a,
+.header-main,
+#forecast-list li strong,
+.spotlight-card a {
+    color: var(--cobalt-blue);
+}
+
+main,
+header,
+.directory-btn,
+.list-view section,
+.card p,
+.card div,
+.card ul,
+#current-weather-content {
     padding: 1rem;
+}
+
+.logo p,
+#menu,
+.toggle-buttons button,
+footer,
+#weather-desc,
+.weather-details {
+    font-size: 1rem;
+}
+
+.logo p,
+#navbar a,
+.membership-badge,
+.cta a,
+.spotlight-card h3 {
+    font-weight: 700;
+}
+
+.badge-lvl-1,
+.badge-lvl-3,
+.cta-btn:hover,
+.card,
+.spotlight-card .badge.gold {
+    border: 1px solid var(--vibrant-orange);
+}
+
+html,
+.list-view section,
+.spotlight-card,
+.spotlight-card .badge.silver {
+    background-color: var(--off-white);
+}
+
+main,
+#navbar a,
+.hero-container,
+.hero-image {
+    display: block;
+}
+
+header,
+.toggle-buttons button,
+.badge-lvl-2,
+footer {
+    background-color: var(--off-white);
+}
+
+.header-main,
+.grid-view section,
+footer,
+#current-weather-content {
+    text-align: center;
+}
+
+.grid-view,
+footer,
+.info-grid,
+#spotlight-container {
+    gap: 1.5rem;
 }
 
 /* Header & Navigation Area */
 header {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     position: relative;
-    background-color: var(--off-gray);
     border-bottom: 1px solid var(--cobalt-blue);
-    color: var(--cobalt-blue);
-    padding: 1rem;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
     gap: .3rem;
     flex: 1;
     min-width: 0;
@@ -69,24 +263,15 @@ header {
 }
 
 .logo p {
-    font-size: 1rem;
     line-height: 1.2;
     margin: 0;
-    font-weight: 700;
     overflow-wrap: anywhere;
 }
 
 #menu {
     flex-shrink: 0;
-    background: none;
     border: none;
-    color: var(--cobalt-blue);
-    font-size: 1rem;
     cursor: pointer;
-}
-
-#navbar {
-    width: 100%;
 }
 
 #navbar ul {
@@ -94,82 +279,53 @@ header {
     padding: 0;
     margin: 1rem 0 0 0;
     display: none;
-    flex-direction: column;
-    width: 100%;
     text-align: left;
 }
 
-#navbar.open ul {
-    display: flex;
-}
-
 #navbar a {
-    color: var(--cobalt-blue);
     text-decoration: none;
     padding: 0.5rem;
-    display: block;
-    font-weight: 700;
-    border: 1px solid transparent;
 }
 
 #navbar a.active,
 #navbar a:hover {
-    color: var(--charcoal);
     background-color: var(--vibrant-orange);
-    border: 1px solid var(--charcoal);
-    border-radius: 8px;
+    color: var(--charcoal);
 }
 
 .header-main {
     font-size: 1.7rem;
     margin: 1rem 0;
-    text-align: center;
-    color: var(--cobalt-blue);
 }
 
 /* Directory Layout Headings & Controls */
 .directory-btn {
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
 }
 
 .toggle-buttons button {
     padding: 0.6rem 1rem;
     border: 1px solid var(--charcoal);
-    background-color: var(--off-gray);
-    color: var(--vibrant-orange);
+    color: var(--charcoal);
     cursor: pointer;
-    border-radius: 8px;
     font-weight: bold;
-    font-size: 1rem;
     white-space: nowrap;
 }
 
 .toggle-buttons button.active {
-    background-color: var(--vibrant-orange);
     color: var(--charcoal);
+    background-color: var(--vibrant-orange);
 }
 
 /* --- GRID VIEW --- */
 .grid-view {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    margin: 0 auto;
 }
 
 .grid-view section {
     background: var(--off-white);
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    text-align: center;
     border-top: 5px solid var(--vibrant-orange);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -197,26 +353,13 @@ header {
 
 .grid-view section p {
     margin: 0.5rem 0;
-    font-size: 0.9rem;
 }
 
 /* --- LIST VIEW --- */
-.list-view {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    margin: 0 auto;
-}
 
 .list-view section {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
     margin-bottom: 0.5rem;
-    background-color: var(--off-white);
     border-bottom: 1px solid var(--vibrant-orange);
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .list-view section img {
@@ -229,16 +372,13 @@ header {
 
 .list-view section p {
     margin: 0.25rem 0;
-    font-size: 0.9rem;
 }
 
 /* Membership Level Badges */
 .membership-badge {
     display: inline-block;
     font-size: 0.8rem;
-    font-weight: 700;
     padding: 0.25rem 0.6rem;
-    border-radius: 8px;
     margin: 0.5rem 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -246,33 +386,21 @@ header {
 
 .badge-lvl-1 {
     background-color: var(--gold);
-    color: var(--charcoal);
-    border: 1px solid var(--vibrant-orange);
 }
 
 .badge-lvl-2 {
-    background-color: var(--off-gray);
-    color: var(--charcoal);
     border: 1px solid var(--silver);
 }
 
 .badge-lvl-3 {
     background-color: var(--bg-gold);
     color: var(--gold);
-    border: 1px solid var(--vibrant-orange);
 }
 
 /* FOOTER */
 footer {
-    background-color: var(--off-gray);
-    color: var(--charcoal);
     padding: 2rem 1rem;
-    font-size: 1rem;
     line-height: 1.1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
     border-top: 1px solid var(--cobalt-blue);
 }
 
@@ -281,10 +409,7 @@ footer p {
 }
 
 .socials-btn {
-    display: flex;
-    justify-content: center;
     gap: 1rem;
-    align-items: center;
 }
 
 .socials-btn img {
@@ -302,24 +427,19 @@ footer p {
 .card,
 .spotlight-section,
 .hero-container {
-    width: 100%;
     max-width: 100%;
 }
 
 /* Hero Elements */
 .hero-container {
     position: relative;
-    display: block;
     margin-bottom: 1.5rem;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--black-shadow);
 }
 
 .hero-image {
-    width: 100%;
     height: auto;
-    display: block;
     aspect-ratio: 16 / 3;
     object-fit: cover;
 }
@@ -330,29 +450,22 @@ footer p {
     bottom: 10px;
     right: 10px;
     background-color: var(--vibrant-orange);
-    color: var(--charcoal);
     padding: 0.5rem 1rem;
     text-decoration: none;
-    font-weight: 700;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px var(--charcoal);
+    box-shadow: var(--black-shadow) 0px 2px 4px;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 .cta-btn:hover {
     background-color: var(--charcoal);
     color: var(--vibrant-orange);
-    border: 1px solid var(--vibrant-orange);
 }
 
 /* Card Foundations */
 .card {
-    background: var(--off-gray);
-    border: 1px solid var(--vibrant-orange);
-    border-radius: 8px;
+    background: var(--off-white);
     margin-bottom: 1.5rem;
     overflow: hidden;
-    box-shadow: var(--black-shadow) 0px 3px 8px;
 }
 
 .card h1,
@@ -369,22 +482,11 @@ main h2 {
     overflow-wrap: break-word;
 }
 
-.card p,
-.card div,
-.card ul {
-    padding: 1rem;
-}
-
 /* Info Layouts */
 .event-item h2 {
-    color: var(--charcoal);
-    background: transparent;
+    background: var(--off-white);
     padding: 0;
     margin: 0 0 0.5rem 0;
-}
-
-.event-item p {
-    color: var(--charcoal);
 }
 
 #forecast-list {
@@ -392,13 +494,8 @@ main h2 {
 }
 
 #forecast-list li {
-    color: var(--charcoal);
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--vibrant-orange);
-}
-
-#forecast-list li strong {
-    color: var(--cobalt-blue);
 }
 
 #forecast-list li:last-child {
@@ -408,16 +505,10 @@ main h2 {
 .info-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
 }
 
 #current-weather-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
     gap: 0.5rem;
-    align-items: center;
-    text-align: center;
 }
 
 #current-weather-content div,
@@ -427,13 +518,9 @@ main h2 {
 }
 
 .weather-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 0.5rem;
     font-size: 2.2rem;
     font-weight: bold;
-    color: var(--charcoal);
 }
 
 .weather-main img {
@@ -441,30 +528,15 @@ main h2 {
     height: 50px;
 }
 
-#weather-desc,
-.weather-details {
-    font-size: 1rem;
-    color: var(--charcoal);
-}
-
-/* ==========================================================================
-   UNIFORM STYLE FOR SPOTLIGHT CARDS
-   ========================================================================== */
+/* --- SPOTLIGHT CARDS --- */
 #spotlight-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
     padding: 0 1rem;
 }
 
 .spotlight-card {
-    background-color: var(--off-white);
-    border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px var(--black-shadow);
-    border: 1px solid var(--off-gray);
-    display: flex;
-    flex-direction: column;
+    border: 1px solid var(--off-white);
     gap: 0.8rem;
     margin-bottom: 0.5rem;
 }
@@ -472,22 +544,17 @@ main h2 {
 .spotlight-section h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    border-radius: 8px;
 }
 
 .spotlight-card h3 {
-    color: var(--charcoal);
     font-size: 1.2rem;
-    font-weight: 700;
 }
 
 .spotlight-card p {
-    color: var(--charcoal);
     font-size: 0.95rem;
 }
 
 .spotlight-card a {
-    color: var(--cobalt-blue);
     text-decoration: none;
     font-weight: 600;
 }
@@ -503,7 +570,6 @@ main h2 {
     align-self: center;
 }
 
-/* Global badge style */
 .spotlight-card .badge {
     padding: 0.35rem 0.75rem;
     border-radius: 4px;
@@ -518,11 +584,9 @@ main h2 {
 .spotlight-card .badge.gold {
     background-color: var(--bg-gold);
     color: var(--gold);
-    border: 1px solid var(--vibrant-orange);
 }
 
 .spotlight-card .badge.silver {
-    background-color: var(--off-white);
     color: var(--silver);
     border: 1px solid var(--charcoal);
 }
