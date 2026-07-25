@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Membership Join Page | Pétion-Ville Chamber of Commerce</title>
+    <meta name="description" content="Join our Chamber of Commerce today. Enjoy exceptional benefits, expand your network, and grow your business.">
+    <meta name="author" content="John Peter Joseph">
+
+    <!--Meta Graph (open graph)-->
+    <meta property="og:title" content="The Pétion-Ville Chamber of Commerce">
+    <meta property="og:description" content="Chamber Membership Join Page of the Pétion-Ville Chamber of Commerce Business Directory">
+    <meta property="og:image" content="https://johneter-io.github.io/wdd231/chamber/images/hero-large.webp">
+    <meta property="og:url" content="https://johneter-io.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <!-- The div tag serves as a container for grouping and organizing page elements -->
+        <div class="logo">
+            <img src="images/chamber-commerce.svg" alt="Pétion-Ville Chamber of Commerce Logo">
+            <p>Pétion-Ville Chamber of Commerce</p>
+        </div>
+
+        <button type="button" id="menu" aria-label="Toggle Menu">&#9776;</button>
+
+        <!-- Main navigation menu for the site -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the Home page -->
+    <main>
+<h1>Join our Chamber of Commerce today</h1>
+
+<br>
+
+<form action="thankyou.html" method="get">
+  
+    <div>
+    <label for="fname">First Name:</label>
+    <input type="text" name="firstname" id="fname" autocomplete="on" placeholder="John" required>
+    </div>
+
+<br>
+
+    <div>
+<label for="lname">Last Name:</label>
+<input type="text" name="lastname" id="lname" autocomplete="on" placeholder="Doe" required>
+    </div>
+
+<br>
+
+<div>
+    <label for="organization">Organization Title:</label>
+    <input type="text" name="lastname" id="organization" autocomplete="on" placeholder="Olivari Co." required>
+</div>
+
+<br>
+
+<div>
+    <label for="email-address">Email:</label>
+    <input type="email" name="email-address" id="email-address" autocomplete="on" placeholder="johndoe@gmail.com" required>
+</div>
+
+<br>
+
+<div>
+    <label for="phone-number">Phone Number:</label>
+    <input type="text" name="phone-number" id="phone-number" autocomplete="on" placeholder="123-456-789" required>
+</div>
+
+<br>
+
+<div>
+    <label for="business-name">Business Name:</label>
+    <input type="text" name="business-name" id="business-name" autocomplete="on" placeholder="Lenappell" required>
+</div>
+
+<br>
+
+<div>
+    <label for="business-name">Membership Level:</label>
+    <select name="" id="">
+<option value="">NP Membership</option>
+<option value="">NP Membership</option>
+<option value="">Bronze Membership</option>
+<option value="">Silver Membership</option>
+<option value="">Gold Membership</option>
+    </select>
+</div> 
+
+<br>
+
+<div>
+    <label for="business-name">Business Name:</label>
+    <input type="date" name="business-name" id="business-name" autocomplete="on" placeholder="Lenappell" required>
+</div>
+
+<br>
+
+<button type="button">Join the Chamber</button>
+</form>
+  
+    </main>
+
+    <!-- Footer: Contacts, Social Media, and Development Information -->
+    <footer>
+        <!-- Physical and digital contact information -->
+        <div class="footer-contact">
+            <p><strong>Pétion-Ville Chamber of Commerce</strong></p>
+            <p>17 Rue Jean-Jacques Louverture</p>
+            <p>Pétion-Ville (Ouest) | Haiti</p>
+            <p>info@petionvillecc.org</p>
+            <p>(509) 12 34 56 78</p>
+        </div>
+
+        <!-- Social media links (open in a new tab) -->
+        <div class="socials-btn">
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                <img src="images/youtube-logo.svg" alt="YouTube logo" aria-hidden="true">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                <img src="images/x-logo.svg" alt="X logo (formerly Twitter)" aria-hidden="true">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/linkedin-logo.svg" alt="LinkedIn logo" aria-hidden="true">
+            </a>
+        </div>
+
+        <!-- Credits and JS scripts (Dynamic year and last modified) -->
+        <div class="footer-me">
+            <p>WDD231 Class Project</p>
+            <p>John Peter Joseph</p>
+            <p>&copy; <span id="currentYear"></span> | Pétion-Ville Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
