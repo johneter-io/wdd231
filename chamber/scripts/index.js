@@ -1,5 +1,5 @@
 // Configuration constants
-const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/forecast?q=Petionville,HT&units=metric&appid=8fe74b653d457a7148ddc2e78f2b9506";
+const WEATHER_API_URL = "https://weather-proxy.johneterjoe.workers.dev/";
 
 const MEMBERS_JSON_URL = "data/members.json";
 
@@ -31,9 +31,8 @@ async function initWeather() {
         document.getElementById("humidity").textContent =
             `${currentData.main.humidity}`;
 
-        const icon = document.getElementById("weather-icon");
-        icon.src = `https://openweathermap.org/img/wn/${currentData.weather[0].icon}@2x.png`;
-        icon.alt = currentData.weather[0].description;
+        document.getElementById("weather-icon").innerHTML =
+       getWeatherIcon(currentData.weather[0].icon);
 
         // 3-Day Forecast
         const forecastList = document.getElementById("forecast-list");

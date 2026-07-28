@@ -1,3 +1,7 @@
+/* ==========================================================================
+   RESET (universal selector — legitimate grouping, not a consolidation
+   of different components)
+   ========================================================================== */
 *,
 *::before,
 *::after {
@@ -6,6 +10,25 @@
     box-sizing: border-box;
 }
 
+/* ==========================================================================
+   GLOBAL VARIABLES
+   ========================================================================== */
+:root {
+    --cobalt-blue: rgb(0, 71, 171);
+    --vibrant-orange: rgb(255, 153, 0);
+    --charcoal: rgb(33, 37, 41);
+    --off-white: rgb(248, 249, 250);
+    --gold: rgb(133, 100, 4);
+    --bg-gold: rgb(255, 243, 205);
+    --silver: rgb(56, 61, 65);
+    --black-shadow: rgb(128, 128, 128);
+    --max-width: 1200px;
+    --font-main: "inter", sans-serif;
+}
+
+/* ==========================================================================
+   BASIC ELEMENTS
+   ========================================================================== */
 html {
     font-size: 16px;
     line-height: 1.15;
@@ -13,6 +36,8 @@ html {
     max-width: 100%;
     overflow-x: hidden;
     font-family: var(--font-main);
+    width: 100%;
+    background-color: var(--off-white);
 }
 
 body {
@@ -22,6 +47,9 @@ body {
 main {
     max-width: var(--max-width);
     margin: 0 auto;
+    width: 100%;
+    padding: 1rem;
+    display: block;
 }
 
 img {
@@ -44,207 +72,14 @@ button::-moz-focus-inner {
 }
 
 /* ==========================================================================
-   GLOBAL VARIABLES
+   HEADER & NAVIGATION
    ========================================================================== */
-:root {
-    --cobalt-blue: rgb(0, 71, 171);
-    --vibrant-orange: rgb(255, 153, 0);
-    --charcoal: rgb(33, 37, 41);
-    --off-white: rgb(248, 249, 250);
-    --gold: rgb(133, 100, 4);
-    --bg-gold: rgb(255, 243, 205);
-    --silver: rgb(56, 61, 65);
-    --black-shadow: rgb(128, 128, 128);
-    --max-width: 1200px;
-    --font-main: "inter", sans-serif;
-}
-
-/* ==========================================================================
-   SHARED DECLARATIONS (consolidated to reduce repeated declarations)
-   ========================================================================== */
-
-.toggle-buttons button,
-.grid-view section,
-.list-view section,
-.membership-badge,
-.hero-container,
-.cta a,
-.card,
-.spotlight-section h2,
-.spotlight-card {
-    border-radius: 8px;
-}
-
-.grid-view section,
-.list-view section,
-.card {
-    box-shadow: var(--black-shadow) 0px 3px 8px;
-}
-
-.grid-view,
-.list-view {
-    padding: 1.5rem;
-    margin: 0 auto;
-}
-
-.grid-view section p,
-.list-view section p {
-    font-size: 0.9rem;
-}
-
-.event-item h2,
-.event-item p,
-#forecast-list li,
-.weather-main,
-#weather-desc,
-.weather-details,
-.spotlight-card h3,
-.spotlight-card p,
-#navbar a.active,
-#navbar a:hover,
-.toggle-buttons button.active,
-.badge-lvl-1,
-.badge-lvl-2,
-.cta a,
-footer {
-    color: var(--charcoal);
-}
-
-header,
-.logo,
-#navbar.open ul,
-.directory-btn,
-.list-view,
-.list-view section,
-footer,
-.socials-btn,
-#current-weather-content,
-.weather-main,
-#spotlight-container,
-.spotlight-card {
-    display: flex;
-}
-
-#navbar ul,
-.directory-btn,
-.list-view,
-.list-view section,
-footer,
-#current-weather-content,
-#spotlight-container,
-.spotlight-card {
-    flex-direction: column;
-}
-
-html,
-main,
-#navbar,
-#navbar ul,
-.directory-btn,
-.card,
-.spotlight-section,
-.hero-container,
-.hero-image {
-    width: 100%;
-}
-
-.directory-btn,
-.socials-btn,
-.weather-main {
-    justify-content: center;
-}
-
-header,
-.logo,
-.directory-btn,
-.socials-btn,
-#current-weather-content,
-.weather-main {
-    align-items: center;
-}
-
-header,
-#menu,
-#navbar a,
-.header-main,
-#forecast-list li strong,
-.spotlight-card a {
-    color: var(--cobalt-blue);
-}
-
-main,
-header,
-.directory-btn,
-.list-view section,
-.card p,
-.card div,
-.card ul,
-#current-weather-content {
-    padding: 1rem;
-}
-
-.logo p,
-#menu,
-.toggle-buttons button,
-footer,
-#weather-desc,
-.weather-details {
-    font-size: 1rem;
-}
-
-.logo p,
-#navbar a,
-.membership-badge,
-.cta a,
-.spotlight-card h3 {
-    font-weight: 700;
-}
-
-.badge-lvl-1,
-.badge-lvl-3,
-.cta-btn:hover,
-.card,
-.spotlight-card .badge.gold {
-    border: 1px solid var(--vibrant-orange);
-}
-
-html,
-.list-view section,
-.spotlight-card,
-.spotlight-card .badge.silver {
-    background-color: var(--off-white);
-}
-
-main,
-#navbar a,
-.hero-container,
-.hero-image {
-    display: block;
-}
-
-header,
-.toggle-buttons button,
-.badge-lvl-2,
-footer {
-    background-color: var(--off-white);
-}
-
-.header-main,
-.grid-view section,
-footer,
-#current-weather-content {
-    text-align: center;
-}
-
-.grid-view,
-footer,
-.info-grid,
-#spotlight-container {
-    gap: 1.5rem;
-}
-
-/* Header & Navigation Area */
 header {
+    display: flex;
+    align-items: center;
+    color: var(--cobalt-blue);
+    padding: 1rem;
+    background-color: var(--off-white);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -253,6 +88,8 @@ header {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
     gap: .3rem;
     flex: 1;
     min-width: 0;
@@ -263,18 +100,28 @@ header {
 }
 
 .logo p {
+    font-size: 1rem;
+    font-weight: 700;
     line-height: 1.2;
     margin: 0;
     overflow-wrap: anywhere;
 }
 
 #menu {
+    color: var(--cobalt-blue);
+    font-size: 1rem;
     flex-shrink: 0;
     border: none;
     cursor: pointer;
 }
 
+#navbar {
+    width: 100%;
+}
+
 #navbar ul {
+    width: 100%;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 1rem 0 0 0;
@@ -282,28 +129,52 @@ header {
     text-align: left;
 }
 
+#navbar.open ul {
+    display: flex;
+}
+
 #navbar a {
+    color: var(--cobalt-blue);
+    font-weight: 700;
+    display: block;
     text-decoration: none;
     padding: 0.5rem;
 }
 
-#navbar a.active,
+#navbar a.active {
+    background-color: var(--vibrant-orange);
+    color: var(--charcoal);
+}
+
 #navbar a:hover {
     background-color: var(--vibrant-orange);
     color: var(--charcoal);
 }
 
 .header-main {
+    color: var(--cobalt-blue);
+    text-align: center;
     font-size: 1.7rem;
     margin: 1rem 0;
 }
 
-/* Directory Layout Headings & Controls */
+/* ==========================================================================
+   DIRECTORY LAYOUT HEADINGS & CONTROLS
+   ========================================================================== */
 .directory-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     gap: 1rem;
 }
 
 .toggle-buttons button {
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--off-white);
     padding: 0.6rem 1rem;
     border: 1px solid var(--charcoal);
     color: var(--charcoal);
@@ -317,13 +188,21 @@ header {
     background-color: var(--vibrant-orange);
 }
 
-/* --- GRID VIEW --- */
+/* ==========================================================================
+   GRID VIEW
+   ========================================================================== */
 .grid-view {
+    padding: 1.5rem;
+    margin: 0 auto;
+    gap: 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
 }
 
 .grid-view section {
+    border-radius: 8px;
+    box-shadow: var(--black-shadow) 0px 3px 8px;
+    text-align: center;
     background: var(--off-white);
     padding: 1.5rem;
     border-top: 5px solid var(--vibrant-orange);
@@ -352,12 +231,27 @@ header {
 }
 
 .grid-view section p {
+    font-size: 0.9rem;
     margin: 0.5rem 0;
 }
 
-/* --- LIST VIEW --- */
+/* ==========================================================================
+   LIST VIEW
+   ========================================================================== */
+.list-view {
+    padding: 1.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
 .list-view section {
+    border-radius: 8px;
+    box-shadow: var(--black-shadow) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--off-white);
     margin-bottom: 0.5rem;
     border-bottom: 1px solid var(--vibrant-orange);
 }
@@ -371,11 +265,16 @@ header {
 }
 
 .list-view section p {
+    font-size: 0.9rem;
     margin: 0.25rem 0;
 }
 
-/* Membership Level Badges */
+/* ==========================================================================
+   MEMBERSHIP LEVEL BADGES
+   ========================================================================== */
 .membership-badge {
+    border-radius: 8px;
+    font-weight: 700;
     display: inline-block;
     font-size: 0.8rem;
     padding: 0.25rem 0.6rem;
@@ -385,53 +284,31 @@ header {
 }
 
 .badge-lvl-1 {
+    color: var(--charcoal);
+    border: 1px solid var(--vibrant-orange);
     background-color: var(--gold);
 }
 
 .badge-lvl-2 {
+    color: var(--charcoal);
+    background-color: var(--off-white);
     border: 1px solid var(--silver);
 }
 
 .badge-lvl-3 {
+    border: 1px solid var(--vibrant-orange);
     background-color: var(--bg-gold);
     color: var(--gold);
 }
 
-/* FOOTER */
-footer {
-    padding: 2rem 1rem;
-    line-height: 1.1;
-    border-top: 1px solid var(--cobalt-blue);
-}
-
-footer p {
-    margin: 0.2rem 0;
-}
-
-.socials-btn {
-    gap: 1rem;
-}
-
-.socials-btn img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-}
-
-.socials-btn img:hover {
-    opacity: 1;
-}
-
-.card,
-.spotlight-section,
+/* ==========================================================================
+   HERO ELEMENTS
+   ========================================================================== */
 .hero-container {
+    border-radius: 8px;
+    width: 100%;
+    display: block;
     max-width: 100%;
-}
-
-/* Hero Elements */
-.hero-container {
     position: relative;
     margin-bottom: 1.5rem;
     overflow: hidden;
@@ -439,12 +316,17 @@ footer p {
 }
 
 .hero-image {
+    width: 100%;
+    display: block;
     height: auto;
     aspect-ratio: 16 / 3;
     object-fit: cover;
 }
 
 .cta a {
+    border-radius: 8px;
+    color: var(--charcoal);
+    font-weight: 700;
     display: inline-block;
     position: absolute;
     bottom: 10px;
@@ -457,21 +339,78 @@ footer p {
 }
 
 .cta-btn:hover {
+    border: 1px solid var(--vibrant-orange);
     background-color: var(--charcoal);
     color: var(--vibrant-orange);
 }
 
-/* Card Foundations */
+/* ==========================================================================
+   CARD FOUNDATIONS
+   ========================================================================== */
 .card {
+    border-radius: 8px;
+    box-shadow: var(--black-shadow) 0px 3px 8px;
+    width: 100%;
+    border: 1px solid var(--vibrant-orange);
+    max-width: 100%;
     background: var(--off-white);
     margin-bottom: 1.5rem;
     overflow: hidden;
 }
 
-.card h1,
-.weather-card h2,
-.forecast-card h2,
-.spotlight-section h2,
+.card h1 {
+    background-color: var(--cobalt-blue);
+    color: var(--off-white);
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.15rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.card p {
+    padding: 1rem;
+}
+
+.card div {
+    padding: 1rem;
+}
+
+.card ul {
+    padding: 1rem;
+}
+
+.weather-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.weather-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.weather-card h2 {
+    background-color: var(--cobalt-blue);
+    color: var(--off-white);
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.15rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.forecast-card h2 {
+    background-color: var(--cobalt-blue);
+    color: var(--off-white);
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.15rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 main h2 {
     background-color: var(--cobalt-blue);
     color: var(--off-white);
@@ -482,11 +421,18 @@ main h2 {
     overflow-wrap: break-word;
 }
 
-/* Info Layouts */
+/* ==========================================================================
+   INFO LAYOUTS (Events / Weather / Forecast)
+   ========================================================================== */
 .event-item h2 {
+    color: var(--charcoal);
     background: var(--off-white);
     padding: 0;
     margin: 0 0 0.5rem 0;
+}
+
+.event-item p {
+    color: var(--charcoal);
 }
 
 #forecast-list {
@@ -494,6 +440,7 @@ main h2 {
 }
 
 #forecast-list li {
+    color: var(--charcoal);
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--vibrant-orange);
 }
@@ -502,22 +449,43 @@ main h2 {
     border-bottom: none;
 }
 
+#forecast-list li strong {
+    color: var(--cobalt-blue);
+}
+
 .info-grid {
+    gap: 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
 }
 
 #current-weather-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
     gap: 0.5rem;
 }
 
-#current-weather-content div,
-#current-weather-content p {
+#current-weather-content div {
     padding: 0;
     margin: 0;
 }
 
+#current-weather-content p {
+    padding: 0;
+    margin: 0;
+}
+#current-temp {
+    color: var(--cobalt-blue);
+}
+
 .weather-main {
+    color: var(--charcoal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 0.5rem;
     font-size: 2.2rem;
     font-weight: bold;
@@ -528,12 +496,31 @@ main h2 {
     height: 50px;
 }
 
-/* --- SPOTLIGHT CARDS --- */
+#weather-desc {
+    color: var(--charcoal);
+    font-size: 1rem;
+}
+
+.weather-details {
+    color: var(--charcoal);
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   SPOTLIGHT CARDS
+   ========================================================================== */
 #spotlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     padding: 0 1rem;
 }
 
 .spotlight-card {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--off-white);
     padding: 1.5rem;
     box-shadow: 0 4px 6px var(--black-shadow);
     border: 1px solid var(--off-white);
@@ -542,19 +529,29 @@ main h2 {
 }
 
 .spotlight-section h2 {
+    border-radius: 8px;
+    background-color: var(--cobalt-blue);
+    color: var(--off-white);
+    padding: 0.75rem 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem 0;
 }
 
 .spotlight-card h3 {
+    color: var(--charcoal);
+    font-weight: 700;
     font-size: 1.2rem;
 }
 
 .spotlight-card p {
+    color: var(--charcoal);
     font-size: 0.95rem;
 }
 
 .spotlight-card a {
+    color: var(--cobalt-blue);
     text-decoration: none;
     font-weight: 600;
 }
@@ -582,11 +579,51 @@ main h2 {
 }
 
 .spotlight-card .badge.gold {
+    border: 1px solid var(--vibrant-orange);
     background-color: var(--bg-gold);
     color: var(--gold);
 }
 
 .spotlight-card .badge.silver {
+    background-color: var(--off-white);
     color: var(--silver);
     border: 1px solid var(--charcoal);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    color: var(--charcoal);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--off-white);
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    line-height: 1.1;
+    border-top: 1px solid var(--cobalt-blue);
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+.socials-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socials-btn img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.socials-btn img:hover {
+    opacity: 1;
 }
