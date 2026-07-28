@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Pétion-Ville Chamber of Commerce</title>
+    <meta name="description"
+        content="Thank you for submitting your membership application to the Pétion-Ville Chamber of Commerce.">
+    <meta name="author" content="John Peter Joseph">
+
+    <!-- Meta Graph (Open Graph) -->
+    <meta property="og:title" content="Thank You | Pétion-Ville Chamber of Commerce">
+    <meta property="og:description"
+        content="Confirmation page for the Pétion-Ville Chamber of Commerce membership application.">
+    <meta property="og:image" content="https://johneter-io.github.io/wdd231/chamber/images/hero-large.webp">
+    <meta property="og:url" content="https://johneter-io.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/chamber-commerce.svg" alt="Pétion-Ville Chamber of Commerce Logo">
+            <p>Pétion-Ville Chamber of Commerce</p>
+        </div>
+
+        <button type="button" id="menu" aria-label="Toggle Menu">&#9776;</button>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-container">
+        <section class="confirmation-card">
+            <h1>Thank You for Joining!</h1>
+            <p>We have successfully received your application.</p>
+
+            <a href="index.html" class="btn-primary">Back to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p><strong>Pétion-Ville Chamber of Commerce</strong></p>
+            <p>17 Rue Jean-Jacques Louverture</p>
+            <p>Pétion-Ville (Ouest) | Haiti</p>
+            <p>info@petionvillecc.org</p>
+            <p>(509) 12 34 56 78</p>
+        </div>
+
+        <div class="socials-btn">
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                <img src="images/youtube-logo.svg" alt="YouTube logo" aria-hidden="true">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                <img src="images/x-logo.svg" alt="X logo (formerly Twitter)" aria-hidden="true">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/linkedin-logo.svg" alt="LinkedIn logo" aria-hidden="true">
+            </a>
+        </div>
+
+        <div class="footer-me">
+            <p>WDD231 Class Project</p>
+            <p>John Peter Joseph</p>
+            <p>&copy; <span id="currentYear"></span> | Pétion-Ville Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
