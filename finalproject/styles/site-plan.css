@@ -1,0 +1,281 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* The Logic Architect Hub - IDE / Dashboard Theme */
+:root {
+    --bg-base: rgb(9, 13, 22);
+    --bg-panel: rgb(14, 21, 38);
+    --border-line: rgb(30, 41, 59);
+    --accent-blue: rgb(56, 189, 248);
+    --accent-glow: rgba(56, 189, 248, 0.08);
+    --text-main: rgb(248, 250, 252);
+    --text-dim: rgb(100, 116, 139);
+    --font-sans: 'Inter', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 30px 15px;
+}
+
+
+/* Header (IDE Top Bar Style) */
+header {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-line);
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.workspace-status {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+header .subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+}
+
+.author-info {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border-line);
+    padding-top: 15px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.author-info strong {
+    color: var(--text-main);
+}
+
+
+/* Main Flow & Sections */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-line);
+    border-radius: 6px;
+    padding: 30px;
+}
+
+.card h2 {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--border-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h2::after {
+    content: "{ }";
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    font-weight: 400;
+}
+
+.card p {
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.card ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.card li {
+    padding: 8px 0 8px 15px;
+    border-top: 1px solid var(--accent-blue);
+    margin-bottom: 8px;
+    background-color: var(--accent-glow);
+    font-size: 0.95rem;
+}
+
+code {
+    font-family: var(--font-mono);
+    background-color: var(--bg-base);
+    color: var(--accent-blue);
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+}
+
+
+/* Color Palette (Inline Swatches) */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.color-box {
+    background-color: var(--bg-base);
+    border: 1px solid var(--border-line);
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.color-box.primary {
+    border: 3px solid var(--bg-panel);
+}
+
+.color-box.secondary {
+    border: 3px solid var(--accent-blue);
+}
+
+.color-box.neutral-light {
+    border: 3px solid var(--text-main);
+}
+
+.color-name {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.color-hex {
+    font-family: var(--font-mono);
+    color: var(--accent-blue);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.color-use {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+
+/* Typography Demo Section */
+.typography-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.font-group h3 {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+}
+
+.font-inter-demo {
+    padding: 15px;
+    background: var(--bg-base);
+    border-radius: 4px;
+    border: 1px solid var(--border-line);
+}
+
+.font-code-demo {
+    background-color: var(--bg-base);
+    border: 1px solid var(--border-line);
+    border-radius: 4px;
+    padding: 15px;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+}
+
+.font-code-note {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 6px;
+}
+
+
+/* Wireframes Grid */
+.wireframe-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+    .wireframe-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.wireframe-box {
+    background-color: var(--bg-base);
+    border: 1px solid var(--border-line);
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+}
+
+.wireframe-box h3 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+}
+
+.wireframe-box img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-line);
+    border-radius: 2px;
+}
+
+
+/* Footer */
+footer {
+    max-width: 900px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    padding: 20px;
+    border-top: 1px solid var(--border-line);
+}
