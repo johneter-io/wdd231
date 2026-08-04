@@ -29,7 +29,7 @@
 
     <!-- Scripts -->
     <script src="scripts/index.js" defer></script>
-    <script src="scripts/join.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
     <script src="scripts/dates.js" defer></script>
 
 
@@ -52,15 +52,21 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li> <!-- Class active ici -->
+                <li><a href="join.html">Join</a></li> <!-- Active class here -->
                 <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main content of the Home page -->
-    <main class="discover-container">
-        <h1>“Discover” page for members of the Pétion-Ville Chamber of Commerce</h1>
+    <main>
+        <h1 class="discover-main">Discover Pétion-Ville</h1>
+
+        <!-- Message area for visit calculation (localStorage) -->
+        <div id="visit-message" class="visit-banner"></div>
+
+        <!-- Grid where the 8 cards will be dynamically inserted -->
+        <div id="discover-grid" class="discover-grid"></div>
     </main>
 
     <!-- Footer: Contacts, Social Media, and Development Information -->
