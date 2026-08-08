@@ -1,0 +1,30 @@
+@media (min-width: 960px) {
+
+    /* There is no longer any reason for the hamburger menu to be visible:
+           all links are displayed permanently on a large screen */
+    #menu {
+        display: none;
+    }
+
+    header {
+        padding: 1.5rem 3rem;
+    }
+
+    /* The navigation bar switches from a column layout (mobile) to a row layout (desktop),
+and no longer spans the full width—it aligns to the right */
+    #navbar {
+        width: auto;
+    }
+
+    #navbar ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        width: auto;
+        margin: 0;
+    }
+
+    #navbar a {
+        padding: 0.5rem 0.25rem;
+    }
