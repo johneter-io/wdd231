@@ -23,27 +23,36 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
 
+    <!-- Social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!--Stylesheets-->
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <!-- OPTIMIZATION: Load large.css only if necessary -->
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 960px)">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
+
+    <script type="module" src="scripts/app.js"></script>
 </head>
 
 
 <body>
     <header>
-        <!-- The div tag serves as a container for grouping and organizing page elements -->
         <div class="logo">
-            <a href="index.html"><img src="images/logic-architect-logo.svg" alt="The Logic Architect Logo">
-                <span>The Logic Architect Hub</span></a>
+            <a href="index.html">
+                <img src="images/logic-architect-logo.svg" alt="The Logic Architect Logo" width="60" height="60">
+                <span>The Logic Architect Hub</span>
+            </a>
         </div>
 
-        <button type="button" id="menu" aria-label="Toggle Menu" aria-expanded="false"
-            aria-controls="navbar">&#9776;</button>
+        <button type="button" id="menu" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navbar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-        <!-- Main navigation menu for the site -->
         <nav id="navbar">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
@@ -54,32 +63,66 @@
     </header>
 
     <main>
+        <!-- ===== HERO ===== -->
         <div class="hero-container">
             <picture>
                 <source media="(min-width: 960px)" srcset="images/hero-large.webp">
                 <source media="(min-width: 600px)" srcset="images/hero-medium.webp">
-                <img src="images/hero-small.jpg" alt="A road symbolizing a journey through the darkness."
-                    class="hero-image" width="1920" height="800" loading="eager" fetchpriority="high">
+                <img src="images/hero-small.jpg"
+                    alt="Abstract glowing blueprint grid representing The Logic Architect Hub" class="hero-image"
+                    width="1920" height="800" loading="eager" fetchpriority="high">
             </picture>
 
             <div class="hero-text">
                 <img src="images/road.webp" alt="" aria-hidden="true" width="320" height="180">
                 <div class="hero-paragraph">
-                    <h1>Stop managing chaos. Start engineering your life.</h1>
+                    <h1>Stop managing chaos. <br>Start engineering your life.</h1>
                     <p>Interactive planners and discipline frameworks built for people who need systems, not
                         motivation.</p>
                     <a href="thehub.html" class="btn">Explore The Hub</a>
                 </div>
             </div>
         </div>
+
+        <!-- ===== FEATURED RESOURCES ===== -->
+        <section class="featured-resources">
+            <h2>Explore the Blueprints</h2>
+            <p>A preview of the tools inside The Hub (planners, guides, and workbooks built to bring order to your
+                day).</p>
+
+            <div class="resource-grid" id="featured-grid" aria-live="polite">
+                <p class="gallery-loading">Loading resources...</p>
+            </div>
+
+            <a href="thehub.html" class="btn">Explore The Hub</a>
+        </section>
+
+        <!-- ===== CLOSING CTA ===== -->
+        <section class="closing-cta">
+            <h2>Ready to build your system?</h2>
+            <a href="contact.html" class="btn">Start Building</a>
+        </section>
     </main>
 
-    <footer>
+    <!-- ===== SOCIAL SIDEBAR (Global, off-screen) ===== -->
+    <div class="social-fixed">
+        <a href="#" aria-label="Follow us on LinkedIn" target="_blank" rel="noopener"><i
+                class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Follow us on Facebook" target="_blank" rel="noopener"><i
+                class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Follow us on Twitter" target="_blank" rel="noopener"><i
+                class="fa-brands fa-twitter"></i></a>
+    </div>
 
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | <strong>The Logic Architect Hub</strong></p>
+        <ul>
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Demo Video</a></li>
+        </ul>
     </footer>
 
     <script type="module" src="scripts/app.js"></script>
 </body>
-
 
 </html>

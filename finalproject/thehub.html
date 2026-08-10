@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hub | The Logic Architect Hub</title>
+    <meta name="description"
+        content="Browse the full library of interactive planners, operational discipline guides, and workbooks from The Logic Architect Hub, filterable by category.">
+    <meta name="author" content="John Peter Joseph">
+
+    <!--Meta Graph (open graph)-->
+    <meta property="og:title" content="The Hub | The Logic Architect Hub">
+    <meta property="og:description" content="Browse the full library of digital planners and discipline guides.">
+    <meta property="og:image" content="https://johneter-io.github.io/wdd231/finalproject/images/hero-large.webp">
+    <meta property="og:url" content="https://johneter-io.github.io/wdd231/finalproject/thehub.html">
+    <meta property="og:type" content="website">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="styles/small.css">
+    <!-- OPTIMIZATION: Load large.css only if necessary -->
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 960px)">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logic-architect-logo.svg" alt="The Logic Architect Logo" width="60" height="60">
+                <span>The Logic Architect Hub</span>
+            </a>
+        </div>
+
+        <button type="button" id="menu" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navbar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="thehub.html" class="active">The Hub</a></li>
+                <li><a href="contact.html">Start Building</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hub-intro">
+            <h1>The Hub</h1>
+            <p>Every blueprint, planner, and guide in one place. Filter by category to find the system you need.</p>
+        </section>
+
+        <!-- Category filters -->
+        <div class="filter-bar" role="group" aria-label="Filter resources by category">
+            <button type="button" class="filter-btn active" data-category="all">All</button>
+            <button type="button" class="filter-btn" data-category="planner">Planners</button>
+            <button type="button" class="filter-btn" data-category="guide">Guides</button>
+            <button type="button" class="filter-btn" data-category="workbook">Workbooks</button>
+            <button type="button" class="filter-btn" data-category="tool">Tools</button>
+        </div>
+
+        <!-- Dynamic gallery container -->
+        <div id="gallery" class="gallery" aria-live="polite">
+            <p class="gallery-loading">Loading resources...</p>
+        </div>
+
+        <!-- Detail modal -->
+        <div id="resource-modal" class="modal" role="dialog" aria-modal="true" hidden>
+            <div class="modal-content">
+                <button type="button" id="modal-close" aria-label="Close modal">&times;</button>
+                <img id="modal-image" src="" alt="">
+                <h2 id="modal-title"></h2>
+                <p id="modal-format"></p>
+                <p id="modal-level"></p>
+                <p id="modal-price"></p>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Social Sidebar (Outside of <main>) -->
+    <div class="social-fixed">
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | <strong>The Logic Architect Hub</strong></p>
+        <ul>
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Demo Video</a></li>
+        </ul>
+    </footer>
+
+    <script type="module" src="scripts/app.js"></script>
+</body>
+
+</html>

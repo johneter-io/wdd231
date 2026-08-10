@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | The Logic Architect Hub</title>
+    <meta name="description" content="Confirmation page after submitting the contact form on The Logic Architect Hub.">
+    <meta name="author" content="John Peter Joseph">
+
+    <!--Meta Graph (open graph)-->
+    <meta property="og:title" content="Thank You | The Logic Architect Hub">
+    <meta property="og:description" content="Confirmation page for The Logic Architect Hub.">
+    <meta property="og:image" content="https://johneter-io.github.io/wdd231/finalproject/images/hero-large.webp">
+    <meta property="og:url" content="https://johneter-io.github.io/wdd231/finalproject/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="styles/small.css">
+    <!-- OPTIMIZATION: Load large.css only if necessary -->
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 960px)">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <script type="module" src="scripts/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logic-architect-logo.svg" alt="The Logic Architect Logo" width="60" height="60">
+                <span>The Logic Architect Hub</span>
+            </a>
+        </div>
+
+        <button type="button" id="menu" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navbar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="thehub.html">The Hub</a></li>
+                <li><a href="contact.html">Start Building</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-main">
+        <div class="thankyou-card">
+            <h1>Thank You!</h1>
+            <p class="thankyou-message">Your request has been received. Here's a summary of what you submitted:</p>
+
+            <dl class="thankyou-summary" id="summary">
+                <!-- Dynamically populated by JS -->
+            </dl>
+
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Social Sidebar -->
+    <div class="social-fixed">
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | <strong>The Logic Architect Hub</strong></p>
+        <ul>
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Demo Video</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

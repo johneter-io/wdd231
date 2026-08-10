@@ -1,17 +1,73 @@
 @media (min-width: 960px) {
 
-    /* There is no longer any reason for the hamburger menu to be visible:
-           all links are displayed permanently on a large screen */
-    #menu {
-        display: none;
+    /* ==================================== TYPOGRAPHIE & TITRES (Grand écran) ==================================== */
+    .hero-paragraph h1,
+    .thankyou-card h1 {
+        font-size: 2.75rem;
     }
 
+    .hub-intro h1,
+    .contact-intro h1 {
+        font-size: 2.4rem;
+    }
+
+    .closing-cta h2 {
+        font-size: 2rem;
+    }
+
+    .attributions-main h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-paragraph p {
+        font-size: 1.1rem;
+    }
+
+    /* ==================================== CONTENEURS & ESPACEMENTS MAX ==================================== */
+    .featured-resources,
+    .closing-cta,
+    .gallery,
+    .footer-container,
+    .attributions-main {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .featured-resources,
+    .gallery,
+    footer {
+        max-width: 1200px;
+    }
+
+    .closing-cta {
+        max-width: 900px;
+    }
+
+    .attributions-main {
+        max-width: 800px;
+        padding: 4rem 2rem;
+    }
+
+    /* Paddings des sections principales */
+    .featured-resources,
+    .closing-cta {
+        padding: 4rem 3rem;
+    }
+
+    .hub-intro,
+    .contact-intro {
+        padding: 3rem 3rem 1.5rem;
+    }
+
+    /* ==================================== HEADER & NAVBAR ==================================== */
     header {
         padding: 1.5rem 3rem;
     }
 
-    /* The navigation bar switches from a column layout (mobile) to a row layout (desktop),
-and no longer spans the full width—it aligns to the right */
+    #menu {
+        display: none;
+    }
+
     #navbar {
         width: auto;
     }
@@ -28,3 +84,90 @@ and no longer spans the full width—it aligns to the right */
     #navbar a {
         padding: 0.5rem 0.25rem;
     }
+
+    /* ==================================== HERO ==================================== */
+    .hero-text {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.5rem;
+        text-align: left;
+    }
+
+    .hero-text img {
+        display: block;
+        width: 200px;
+        height: auto;
+        max-width: 100%;
+        border-radius: 8px;
+        opacity: 0.85;
+        flex-shrink: 0;
+        border: 1px solid var(--color-accent);
+    }
+
+    .hero-paragraph {
+        max-width: 600px;
+    }
+
+    .hero-paragraph h1 {
+        line-height: 1.15;
+    }
+
+    /* ==================================== GRILLES (3 colonnes) ==================================== */
+    .resource-grid,
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .filter-bar {
+        padding: 0 3rem 2rem;
+    }
+
+    .gallery {
+        padding: 0 3rem 3rem;
+    }
+
+    /* ==================================== SOCIAL SIDEBAR ==================================== */
+    .social-fixed {
+        gap: 0.75rem;
+    }
+
+    .social-fixed a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .social-fixed a svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* ==================================== FOOTER ==================================== */
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+        margin: 0 auto;
+    }
+
+    footer p {
+        margin-bottom: 0;
+    }
+
+    /* ==================================== MODAL & FORM ==================================== */
+    .modal-content {
+        max-width: 480px;
+        padding: 2.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem 3rem 4rem;
+    }
+
+    .thankyou-main {
+        padding: 5rem 2rem;
+    }
+}

@@ -7,22 +7,21 @@ export function initMenu() {
     menuBtn.addEventListener('click', () => {
         const isOpen = navbar.classList.toggle('open');
         menuBtn.setAttribute('aria-expanded', isOpen);
-        menuBtn.innerHTML = isOpen ? '&times;' : '&#9776;';
     });
 
+    // Closes the menu automatically when a link is clicked
     navbar.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navbar.classList.remove('open');
             menuBtn.setAttribute('aria-expanded', 'false');
-            menuBtn.innerHTML = '&#9776;';
         });
     });
 
+    // Close the menu using the Esc key (keyboard accessibility)
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navbar.classList.contains('open')) {
             navbar.classList.remove('open');
             menuBtn.setAttribute('aria-expanded', 'false');
-            menuBtn.innerHTML = '&#9776;';
             menuBtn.focus();
         }
     });

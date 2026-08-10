@@ -1,0 +1,169 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "title": "The Logic Architect v1.0",
+      "category": "planner",
+      "format": "PDF Workbook",
+      "level": "Beginner",
+      "price": "Free",
+      "description": "The flagship interactive planner that structures your day using engineering-style logic blocks instead of vague to-do lists.",
+      "image": "images/covers/logic-architect.webp",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Daily Debug Sheet",
+      "category": "planner",
+      "format": "Printable PDF",
+      "level": "Beginner",
+      "price": "Free",
+      "description": "A single-page daily log to identify friction points in your routine and 'patch' them before they compound.",
+      "image": "images/covers/daily-debug.webp",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Weekly Sprint Planner",
+      "category": "planner",
+      "format": "Interactive PDF",
+      "level": "Intermediate",
+      "price": "$4.99",
+      "description": "Break your week into sprints with clear objectives, blockers, and review checkpoints inspired by agile methodology.",
+      "image": "images/covers/weekly-planner.webp",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Operational Discipline Guide",
+      "category": "guide",
+      "format": "eBook",
+      "level": "Beginner",
+      "price": "$7.99",
+      "description": "A foundational guide explaining how to build systems that don't depend on motivation to function every day.",
+      "image": "images/covers/operational-discipline.webp",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Habit Stack Blueprint",
+      "category": "guide",
+      "format": "PDF Guide",
+      "level": "Beginner",
+      "price": "$3.99",
+      "description": "A step-by-step method for chaining small habits into stable routines that survive bad days.",
+      "image": "images/covers/stack-blueprint.webp",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Focus Protocol",
+      "category": "guide",
+      "format": "Workbook",
+      "level": "Intermediate",
+      "price": "$5.99",
+      "description": "A structured protocol for eliminating distractions during deep work sessions, based on engineering checklists.",
+      "image": "images/covers/focus-protocol.webp",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Goal Decomposition Workbook",
+      "category": "workbook",
+      "format": "Interactive PDF",
+      "level": "Intermediate",
+      "price": "$6.99",
+      "description": "Breaks down abstract ambitions into measurable, actionable subtasks using a top-down architecture approach.",
+      "image": "images/covers/goal-workbook.webp",
+      "featured": true
+    },
+    {
+      "id": 8,
+      "title": "Time Allocation Matrix",
+      "category": "tool",
+      "format": "Spreadsheet Template",
+      "level": "Beginner",
+      "price": "Free",
+      "description": "A simple matrix to audit where your time actually goes versus where you think it goes.",
+      "image": "images/covers/time-matrix.webp",
+      "featured": false
+    },
+    {
+      "id": 9,
+      "title": "Decision Framework Cards",
+      "category": "tool",
+      "format": "Printable Cards",
+      "level": "Intermediate",
+      "price": "$4.49",
+      "description": "A deck of decision-making prompts to reduce hesitation and speed up daily choices.",
+      "image": "images/covers/framework-cards.webp",
+      "featured": false
+    },
+    {
+      "id": 10,
+      "title": "The Error Log Method",
+      "category": "guide",
+      "format": "PDF Guide",
+      "level": "Advanced",
+      "price": "$8.99",
+      "description": "Treats personal setbacks like software bugs: log them, trace the root cause, and patch the underlying system.",
+      "image": "images/covers/error-log.webp",
+      "featured": true
+    },
+    {
+      "id": 11,
+      "title": "Monthly Architecture Review",
+      "category": "planner",
+      "format": "Interactive PDF",
+      "level": "Intermediate",
+      "price": "$5.49",
+      "description": "A monthly review template to evaluate which personal systems are working and which need to be refactored.",
+      "image": "images/covers/architect-review.webp",
+      "featured": false
+    },
+    {
+      "id": 12,
+      "title": "Energy Management Workbook",
+      "category": "workbook",
+      "format": "Workbook",
+      "level": "Beginner",
+      "price": "$4.99",
+      "description": "Shifts focus from time management to energy management to sustain discipline without burnout.",
+      "image": "images/covers/energy-management.webp",
+      "featured": false
+    },
+    {
+      "id": 13,
+      "title": "Blueprint for Deep Work",
+      "category": "guide",
+      "format": "eBook",
+      "level": "Advanced",
+      "price": "$9.99",
+      "description": "An advanced guide to designing an environment and schedule engineered for sustained concentration.",
+      "image": "images/covers/deep-work.webp",
+      "featured": true
+    },
+    {
+      "id": 14,
+      "title": "Routine Debugging Checklist",
+      "category": "tool",
+      "format": "Printable Checklist",
+      "level": "Beginner",
+      "price": "Free",
+      "description": "A quick checklist to diagnose why a routine is failing before abandoning it entirely.",
+      "image": "images/covers/routine-debugging.webp",
+      "featured": false
+    },
+    {
+      "id": 15,
+      "title": "The Architect's Journal",
+      "category": "planner",
+      "format": "Printable PDF",
+      "level": "Intermediate",
+      "price": "$6.49",
+      "description": "A structured journaling template combining reflection prompts with system-design thinking for long-term growth.",
+      "image": "images/covers/architect-journal.webp",
+      "featured": false
+    }
+  ]
+}

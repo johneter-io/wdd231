@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Building | The Logic Architect Hub</title>
+    <meta name="description"
+        content="Get started with The Logic Architect Hub — tell us about your goals and we'll help you find the right system to structure your life.">
+    <meta name="author" content="John Peter Joseph">
+
+    <!--Meta Graph (open graph)-->
+    <meta property="og:title" content="Start Building | The Logic Architect Hub">
+    <meta property="og:description" content="Get started with The Logic Architect Hub.">
+    <meta property="og:image" content="https://johneter-io.github.io/wdd231/finalproject/images/hero-large.webp">
+    <meta property="og:url" content="https://johneter-io.github.io/wdd231/finalproject/contact.html">
+    <meta property="og:type" content="website">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="styles/small.css">
+    <!-- OPTIMIZATION: Load large.css only if necessary -->
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 960px)">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <script type="module" src="scripts/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logic-architect-logo.svg" alt="The Logic Architect Logo" width="60" height="60">
+                <span>The Logic Architect Hub</span>
+            </a>
+        </div>
+
+        <button type="button" id="menu" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navbar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="thehub.html">The Hub</a></li>
+                <li><a href="contact.html" class="active">Start Building</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-intro">
+            <h1>Start Building</h1>
+            <p>Tell us a bit about what you're trying to structure, and we'll point you toward the right blueprint.</p>
+        </section>
+
+        <form action="thankyou.html" method="get" class="contact-form">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" title="Please enter your full name here" required
+                    autocomplete="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" title="Please enter your email here" required
+                    autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="goal">Primary Goal</label>
+                <select id="goal" name="goal" required>
+                    <option value="">Select a goal</option>
+                    <option value="routine">Structure my daily routine</option>
+                    <option value="focus">Improve focus and deep work</option>
+                    <option value="planning">Plan long-term goals</option>
+                    <option value="discipline">Build operational discipline</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <span class="form-label-title">Experience Level</span>
+                <div class="radio-group">
+                    <label><input type="radio" name="experience" value="beginner" required> Beginner</label>
+                    <label><input type="radio" name="experience" value="intermediate"> Intermediate</label>
+                    <label><input type="radio" name="experience" value="advanced"> Advanced</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">What are you hoping to achieve?</label>
+                <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" name="newsletter" value="yes">
+                    Send me updates about new blueprints and guides
+                </label>
+            </div>
+
+            <!-- Hidden field: records submission date -->
+            <input type="hidden" name="submissionDate" id="submissionDate" value="">
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+
+    <!-- Social Sidebar (off-screen) -->
+    <div class="social-fixed">
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | <strong>The Logic Architect Hub</strong></p>
+        <ul>
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Demo Video</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
