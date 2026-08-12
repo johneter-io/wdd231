@@ -10,7 +10,7 @@ export async function loadFeaturedResources() {
         }
 
         const data = await response.json();
-        const featured = shuffle(data.resources).slice(0, 3);
+        const featured = shuffle(data.resources).slice(0, 4);
 
         grid.innerHTML = featured.map(item => `
             <article class="resource-card">

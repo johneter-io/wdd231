@@ -48,7 +48,7 @@
         padding: 4rem 2rem;
     }
 
-    /* Paddings des sections principales */
+    /* Margins for the main sections */
     .featured-resources,
     .closing-cta {
         padding: 4rem 3rem;
@@ -86,11 +86,21 @@
     }
 
     /* ==================================== HERO ==================================== */
+    .hero-container {
+        display: block;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        aspect-ratio: 16 / 6;
+    }
+
     .hero-text {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2.5rem;
-        text-align: left;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: linear-gradient(to top, rgba(14, 21, 38, 0.85), rgba(14, 21, 38, 0.4));
     }
 
     .hero-text img {
@@ -115,8 +125,14 @@
     /* ==================================== TABLES (3 columns) ==================================== */
     .resource-grid,
     .gallery {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+    }
+
+    .resource-grid {
+        margin-bottom: 2rem;
+        text-align: left;
     }
 
     .filter-bar {
