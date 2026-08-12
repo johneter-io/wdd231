@@ -428,6 +428,11 @@ footer ul a:focus-visible,
     color: var(--color-accent);
 }
 
+.attributions-list li {
+    font-size: 0.8rem;
+    list-style: inside;
+}
+
 .card-category {
     font-size: 0.65rem;
     margin-top: 0.2rem;
