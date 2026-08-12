@@ -174,17 +174,24 @@ header {
 header .logo a {
     display: flex;
     align-items: center;
-    gap: .3rem;
 }
 
 header .logo img {
-    height: 60px;
+    height: 40px;
+}
+
+header .logo img:hover {
+    color: var(--color-text);
 }
 
 header .logo span {
     color: var(--color-accent);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 700;
+}
+
+header .logo span:hover {
+    color: var(--color-text);
 }
 
 .header-controls {
@@ -341,16 +348,6 @@ footer ul a:focus-visible,
     padding: 1.5rem;
 }
 
-.resource-card img,
-.card img {
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-}
-
-.gallery {
-    padding: 1.5rem;
-}
-
 .gallery-loading {
     grid-column: 1 / -1;
     text-align: center;
@@ -426,11 +423,6 @@ footer ul a:focus-visible,
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--color-accent);
-}
-
-.attributions-list li {
-    font-size: 0.8rem;
-    list-style: inside;
 }
 
 .card-category {
@@ -710,7 +702,8 @@ footer ul {
 }
 
 .attributions-list li {
-    line-height: 1.7;
+    font-size: 0.8rem;
+    list-style: inside;
 }
 
 .attributions-list a {

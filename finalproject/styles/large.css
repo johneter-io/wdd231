@@ -186,11 +186,9 @@
     .thankyou-main {
         padding: 5rem 2rem;
     }
-}
-
-/* ==================================== ATTRIBUTIONS ==================================== */
-
-.attributions-list li {
-    font-size: 1rem;
-    list-style: inside;
+    /* ==================================== ATTRIBUTIONS ==================================== */
+    
+    .attributions-list li {
+        font-size: 1rem;
+    }
 }
