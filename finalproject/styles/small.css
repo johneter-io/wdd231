@@ -329,7 +329,12 @@ footer ul a:focus-visible,
     color: rgb(248, 250, 252);
     font-size: clamp(0.85rem, 3.5vw, 0.9rem);
     font-weight: 300;
-    font-style: italic;
+}
+
+.tla-highlight {
+    color: rgb(56, 189, 248);
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 /* ==================================== CARDS & GRIDS (home + hub) ==================================== */
