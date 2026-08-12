@@ -10,6 +10,13 @@
     --font-mono: "JetBrains Mono", Consolas, monospace;
 }
 
+[data-theme="light"] {
+    --color-bg: rgb(248, 250, 252);
+    --color-text: rgb(14, 21, 38);
+    --color-accent: rgb(3, 105, 161);
+    --color-btn-bg: rgb(56, 189, 248);
+}
+
 *,
 *::before,
 *::after {
@@ -64,8 +71,8 @@ svg {
     outline-offset: 2px;
 }
 
-/* ==================================== REGROUPEMENTS TYPO & INTROS ==================================== */
-/* Titres de sections principaux */
+/* ==================================== TYPOGRAPHY GROUPS & INTRODUCTIONS ==================================== */
+/* Main section headings */
 .featured-resources h2,
 .hub-intro h1,
 .contact-intro h1,
@@ -80,7 +87,7 @@ svg {
     margin-bottom: 1.25rem;
 }
 
-/* Sections avec intro centrée */
+/* Sections with a centered introduction */
 .featured-resources,
 .closing-cta,
 .hub-intro,
@@ -99,7 +106,7 @@ svg {
     border-top: 1px solid var(--color-accent);
 }
 
-/* Textes de présentation / sous-titres */
+/* Introductory text / subtitles */
 .featured-resources>p,
 .thankyou-message,
 .attributions-intro {
@@ -128,7 +135,7 @@ svg {
     padding: 0.4rem 1rem;
 }
 
-/* Etats Hover/Focus partagés */
+/* Shared Hover/Focus States */
 .btn:hover,
 .btn:focus-visible,
 .btn-small:hover,
@@ -178,6 +185,21 @@ header .logo span {
     color: var(--color-accent);
     font-size: 1.3rem;
     font-weight: 700;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#theme-toggle {
+    font-size: 1.2rem;
+    line-height: 1;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
 }
 
 #menu {
@@ -292,11 +314,12 @@ footer ul a:focus-visible,
 }
 
 .hero-paragraph h1 {
-    color: var(--color-accent);
+    color: rgb(56, 189, 248);
     font-size: 1.6rem;
 }
 
 .hero-paragraph p {
+    color: rgb(248, 250, 252);
     font-size: 0.9rem;
     font-weight: 300;
     font-style: italic;

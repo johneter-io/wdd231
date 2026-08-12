@@ -1,10 +1,12 @@
 import { initMenu } from './menu.js';
+import { initTheme } from './theme.js';
 import { loadFeaturedResources } from './featured.js';
 import { initGallery } from './gallery.js';
 import { displaySubmission } from './thankyou.js';
 import { displayCurrentYear } from './dates.js';
 
 initMenu();
+initTheme();
 initGallery();
 displayCurrentYear();
 

@@ -1,6 +1,6 @@
 @media (min-width: 960px) {
 
-    /* ==================================== TYPOGRAPHIE & TITRES (Grand écran) ==================================== */
+    /* ==================================== TYPOGRAPHY & HEADINGS (Wide Screen) ==================================== */
     .hero-paragraph h1,
     .thankyou-card h1 {
         font-size: 2.75rem;
@@ -23,7 +23,7 @@
         font-size: 1.1rem;
     }
 
-    /* ==================================== CONTENEURS & ESPACEMENTS MAX ==================================== */
+    /* ==================================== CONTAINERS & MAXIMUM SPACING ==================================== */
     .featured-resources,
     .closing-cta,
     .gallery,
@@ -112,7 +112,7 @@
         line-height: 1.15;
     }
 
-    /* ==================================== GRILLES (3 colonnes) ==================================== */
+    /* ==================================== TABLES (3 columns) ==================================== */
     .resource-grid,
     .gallery {
         grid-template-columns: repeat(3, 1fr);
